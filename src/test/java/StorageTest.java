@@ -4,11 +4,10 @@ import org.junit.jupiter.api.Test;
 public class StorageTest {
 
     @Test
-    public void checkSize1()
-    {
+    public void checkSize1() {
         int[] arr = new int[50];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) (Math.random() * i*10);
+            arr[i] = (int) (Math.random() * i * 10);
         }
         IndexStorage st = new ArrayIndexStorage(arr);
 
@@ -20,11 +19,10 @@ public class StorageTest {
 
 
     @Test
-    public void checkSize2()
-    {
+    public void checkSize2() {
         int[] arr = new int[500];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) (Math.random() * i*10);
+            arr[i] = (int) (Math.random() * i * 10);
         }
         IndexStorage st = new ArrayIndexStorage(arr);
 
@@ -35,8 +33,7 @@ public class StorageTest {
     }
 
     @Test
-    public void checkGet1()
-    {
+    public void checkGet1() {
         IndexStorage st = new IndexStorage(50);
 
         int expected = -2;
@@ -46,8 +43,7 @@ public class StorageTest {
     }
 
     @Test
-    public void checkGet2()
-    {
+    public void checkGet2() {
         IndexStorage st = new IndexStorage(50);
 
         int expected = 1;
@@ -57,8 +53,7 @@ public class StorageTest {
     }
 
     @Test
-    public void checkEGet1()
-    {
+    public void checkEGet1() {
         IndexStorage st = new IndexStorage(50);
 
         Throwable exception = org.junit.jupiter.api.Assertions
@@ -68,8 +63,7 @@ public class StorageTest {
     }
 
     @Test
-    public void checkEGet2()
-    {
+    public void checkEGet2() {
         IndexStorage st = new IndexStorage(50);
 
         Throwable exception = org.junit.jupiter.api.Assertions
@@ -80,8 +74,7 @@ public class StorageTest {
 
 
     @Test
-    public void checkISSize1()
-    {
+    public void checkISSize1() {
         IndexStorage st = new IndexStorage(50);
 
         int expected = 50;
@@ -91,8 +84,7 @@ public class StorageTest {
     }
 
     @Test
-    public void checkISSize2()
-    {
+    public void checkISSize2() {
         IndexStorage st = new IndexStorage(0);
 
         Throwable exception = org.junit.jupiter.api.Assertions
@@ -102,8 +94,7 @@ public class StorageTest {
     }
 
     @Test
-    public void checkReverse()
-    {
+    public void checkReverse() {
         IndexStorage st = new IndexStorage(50); // [0,1,2,3,4,5..49]
 
         // Сравним первый элемент
@@ -114,8 +105,7 @@ public class StorageTest {
     }
 
     @Test
-    public void checkGetData()
-    {
+    public void checkGetData() {
         IndexStorage st = new IndexStorage(50); // [0,1,2,3,4,5..49]
 
         // Сравним первый элемент
